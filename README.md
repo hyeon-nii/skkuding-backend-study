@@ -1,98 +1,82 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+스꾸딩 2025년 2학기 백엔드 스터디
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+이 프로젝트는 Node.js 기반의 웹 서버 기초부터 시작하여, NestJS 프레임워크와 데이터베이스, 그리고 GraphQL API까지 단계별로 발전시키는 과정을 담고 있습니다.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+📚 학습 및 실습 내용 (Curriculum)
+매주 단계별 과제를 수행하며 다음과 같은 백엔드 핵심 기술들을 학습하고 적용했습니다.
 
-## Description
+1. Express.js & TypeScript 기초
+Node.js와 Express.js를 이용한 기본 REST API 서버 구축
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+JavaScript 코드를 TypeScript로 마이그레이션하여 정적 타입 시스템 적용
 
-## Project setup
+파일 시스템(fs)을 이용한 데이터 관리에서 메모리 기반 구조로의 리팩토링
 
-```bash
-$ npm install
-```
+2. NestJS 마이그레이션 & 아키텍처
+Express 기반 코드를 NestJS 프레임워크로 마이그레이션
 
-## Compile and run the project
+Module, Controller, Service 패턴을 적용하여 관심사 분리
 
-```bash
-# development
-$ npm run start
+**DTO(Data Transfer Object)**와 Pipe를 활용한 데이터 유효성 검사
 
-# watch mode
-$ npm run start:dev
+Unit Test(유닛 테스트) 작성 및 비즈니스 로직 검증
 
-# production mode
-$ npm run start:prod
-```
+3. 데이터베이스 & ORM (PostgreSQL + Prisma)
+Docker와 Docker Compose를 활용한 PostgreSQL 컨테이너 환경 구축
 
-## Run tests
+Prisma ORM을 도입하여 스키마(Schema) 설계 및 DB 연동
 
-```bash
-# unit tests
-$ npm run test
+데이터베이스 Migration 및 초기 데이터 Seeding 실습
 
-# e2e tests
-$ npm run test:e2e
+실제 DB와 연동된 영속적인 CRUD 로직 구현
 
-# test coverage
-$ npm run test:cov
-```
+4. GraphQL API 전환
+기존 REST API 구조를 GraphQL 기반으로 전환
 
-## Deployment
+Code First 방식을 사용하여 TypeScript 클래스로 스키마 자동 생성
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+Query(조회) 및 Mutation(생성, 수정, 삭제) Resolver 구현
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+Apollo Playground를 활용한 API 테스트
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+🛠 Tech Stack
+Framework: NestJS
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+Language: TypeScript
 
-## Resources
+Database: PostgreSQL
 
-Check out a few resources that may come in handy when working with NestJS:
+ORM: Prisma
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+API: GraphQL (Apollo Server), REST API (Legacy)
 
-## Support
+Infra: Docker, Docker Compose
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+🚀 실행 방법 (Getting Started)
+이 프로젝트를 로컬 환경에서 실행하려면 다음 단계가 필요합니다.
 
-## Stay in touch
+1. 패키지 설치
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Bash
 
-## License
+npm install
+2. 데이터베이스 실행 (Docker)
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+Bash
+
+docker compose up -d
+3. Prisma 설정 및 데이터 초기화
+
+Bash
+
+# 데이터베이스 마이그레이션 (테이블 생성)
+npx prisma migrate dev
+
+# 초기 더미 데이터 생성 (Seeding)
+npx prisma db seed
+4. 서버 실행
+
+Bash
+
+npm run start:dev
+5. 테스트 (GraphQL Playground) 브라우저에서 http://localhost:3000/graphql로 접속하여 쿼리를 테스트할 수 있습니다.
