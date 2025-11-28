@@ -1,0 +1,20 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 식당 테이블 정의
+model Restaurant {
+  id        Int      @id @default(autoincrement()) // 자동 증가하는 ID
+  name      String   @unique                       // 식당 이름 (중복 불가)
+  address   String                                 // 주소
+  phone     String                                 // 전화번호
+  createdAt DateTime @default(now())               // 생성 시간 자동 기록
+  updatedAt DateTime @updatedAt                    // 수정 시간 자동 기록
+}
